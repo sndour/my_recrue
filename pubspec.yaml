@@ -1,0 +1,50 @@
+name: my_recrue
+description: "an app to manage talents"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  dio: ^5.8.0+1
+  flex_color_scheme: ^8.2.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_hooks: ^0.21.2
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.2.0
+  fpdart: ^1.1.1
+  freezed_annotation: ^3.0.0
+  get: ^4.7.2
+  go_router: ^15.2.4
+  json_annotation: ^4.9.0
+  smooth_page_indicator: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.5.4
+  custom_lint: ^0.7.5
+  freezed: ^3.0.6
+  http_mock_adapter: ^0.6.1
+  json_serializable: ^6.9.5
+  logger: ^2.6.0
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+  fonts:
+    - family:  Satoshi
+      fonts:
+        - asset: assets/fonts/satoshi/satoshi.otf
+          style: normal
+        - asset: assets/fonts/satoshi/satoshi-bold.otf
+          style: normal
+        - asset: assets/fonts/satoshi/satoshi-italic.otf
+          style: italic

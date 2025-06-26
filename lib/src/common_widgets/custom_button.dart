@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class CustomButton extends StatelessWidget {
+  final Function() action;
+  final String text;
+  final Color color;
+  final Color textColor;
+  final double? fontSize;
+  final String? image;
+  const CustomButton({super.key, required this.action, required this.text, required this.color, this.fontSize, this.image, required this.textColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      height: 59,
+      child: ElevatedButton(
+        onPressed: action,
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(color),
+          textStyle: WidgetStateProperty.all(Theme.of(context).textTheme.bodyMedium!.copyWith(color: textColor)),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(text, style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: textColor, fontWeight: FontWeight.bold)),
+            SizedBox(width: 5,),
+            image != null ? SvgPicture.asset(image!) : const SizedBox.shrink(),
+          ],
+        ),
+      ),
+    );
+  }
+}
