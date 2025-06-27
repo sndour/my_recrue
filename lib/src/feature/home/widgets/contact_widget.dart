@@ -10,8 +10,9 @@ class ContactWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 348,
-      height: 92,
+      width: 348.w,
+
+      height: 92.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Color(0xff6B1A3B),

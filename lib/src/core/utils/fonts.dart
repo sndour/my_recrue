@@ -1,3 +1,3 @@
 class Fonts {
-  static String Satoshi = 'satoshi';
+  static String Satoshi = 'Satoshi';
 }

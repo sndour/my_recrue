@@ -9,36 +9,38 @@ class ArrowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 348,
-      height: 92,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Color(0xffF0E8EB),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 21.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              TextKey.arrow_title,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                fontSize: 16.sp,
-                color: Theme.of(context).colorScheme.primary,
+    return Expanded(
+      child: Container(
+        width: 348.w,
+        height: 92.h,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Color(0xffF0E8EB),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 21.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                TextKey.arrow_title,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  fontSize: 16.sp,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 14.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  SvgPicture.asset(MyAssets.arrowContactList,
-                  ),
-                ],
-              ),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 14.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SvgPicture.asset(MyAssets.arrowContactList,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

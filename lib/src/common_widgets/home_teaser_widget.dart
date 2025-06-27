@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_recrue/src/core/utils/my_assets.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
 
@@ -8,9 +9,10 @@ class HomeTeaserWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 348,
-      height: 239,
+      width: 348.w,
+      height: 239.h,
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
         image: DecorationImage(
           image: AssetImage(MyAssets.teaser),
           fit: BoxFit.cover,

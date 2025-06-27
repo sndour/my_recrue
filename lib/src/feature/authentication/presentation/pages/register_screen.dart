@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/common_widgets/custom_button.dart';
 import 'package:my_recrue/src/common_widgets/custum_text_field.dart';
@@ -34,7 +33,7 @@ class RegisterScreen extends StatelessWidget {
               children: [
                 Text(TextKey.askIfAlreadyHadAnAccount,),
                 SizedBox(width: 5),
-                Text(TextKey.connect, style: context.theme.textTheme.bodyMedium!.copyWith(color: context.theme.colorScheme.primary, fontWeight: FontWeight.bold,  decoration: TextDecoration.underline, decorationColor: context.theme.colorScheme.primary, decorationThickness: 1.0
+                Text(TextKey.connect, style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold,  decoration: TextDecoration.underline, decorationColor: Theme.of(context).colorScheme.primary, decorationThickness: 1.0
                 ),),
               ],
             ),

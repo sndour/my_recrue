@@ -17,7 +17,6 @@ dependencies:
   flutter_svg: ^2.2.0
   fpdart: ^1.1.1
   freezed_annotation: ^3.0.0
-  get: ^4.7.2
   go_router: ^15.2.4
   json_annotation: ^4.9.0
   smooth_page_indicator: ^1.2.1
@@ -39,12 +38,8 @@ flutter:
   assets:
     - assets/images/
 
+
   fonts:
-    - family:  Satoshi
+    - family: Satoshi
       fonts:
-        - asset: assets/fonts/satoshi/satoshi.otf
-          style: normal
-        - asset: assets/fonts/satoshi/satoshi-bold.otf
-          style: normal
-        - asset: assets/fonts/satoshi/satoshi-italic.otf
-          style: italic
+        - asset: assets/fonts/satoshi/Satoshi-Regular.otf

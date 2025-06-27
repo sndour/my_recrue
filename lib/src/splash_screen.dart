@@ -11,6 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+
     _navigateToHome(context);
     final Widget svg = SvgPicture.asset(
       MyAssets.splashScreen,
@@ -22,7 +23,7 @@ class SplashScreen extends StatelessWidget {
   }
 
   _navigateToHome(BuildContext context) async {
-    var duration = Duration(milliseconds: 3000);
+    var duration = Duration(milliseconds: 5000);
     await Future.delayed(duration, () {
       if (context.mounted) context.go(AppPage.onboarding.routePath);
     });

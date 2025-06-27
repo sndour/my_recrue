@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 import 'package:my_recrue/src/common_widgets/custom_button.dart';
 
 class OnboardingContentWidget extends StatelessWidget {
@@ -24,9 +23,9 @@ class OnboardingContentWidget extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Text(title, style: context.textTheme.displayLarge!.copyWith(color: context.theme.colorScheme.primary)),
+          Text(title, style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Theme.of(context).colorScheme.primary)),
           SizedBox(height: 16),
-          Text(description, style: context.textTheme.bodyMedium),
+          Text(description, style: Theme.of(context).textTheme.bodyMedium),
           SizedBox(height: 95),
           SvgPicture.asset(image, width: 265, height: 243,),
           const Spacer(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CustomTextField extends StatefulWidget {
   final String hintText;
@@ -46,7 +45,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     final bool _shouldFloatHint = _controller.text.isNotEmpty || _isFocused;
 
     // Détermine la couleur de la bordure en fonction du focus
-    final Color _borderColor = _isFocused ? context.theme.colorScheme.primary : Colors.grey.shade400;
+    final Color _borderColor = _isFocused ? Theme.of(context).colorScheme.primary : Colors.grey.shade400;
     // Détermine l'épaisseur de la bordure en fonction du focus (optionnel, pour un effet plus marqué)
     final double _borderWidth = _isFocused ? 1.5 : 1.0;
 
