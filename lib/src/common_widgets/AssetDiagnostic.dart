@@ -20,7 +20,7 @@ class _AssetDiagnosticState extends State<AssetDiagnostic> {
     final assetsToTest = [
       'assets/images/logo.png',
       'assets/images/arrow_contact_list.svg',
-      'assets/fonts/satoshi/Satoshi-Regular.otf',
+      'assets/fonts/satoshi/Satoshi-Regular.ttf',
       // Ajoutez ici TOUS vos assets
     ];
 

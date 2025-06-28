@@ -24,22 +24,22 @@ class OnboardingWrapContentWidget extends StatelessWidget {
                     title: TextKey.titleOnboardingOne,
                     description: TextKey.underTitleOnboardingOne,
                     image: MyAssets.onboardingOne,
-                    colorButton: Color(0xff6B1A3B),
+                    colorButton: Theme.of(context).colorScheme.primary,
                     action: _nextOnboarding
                   ),
                   OnboardingContentWidget(
                     title: TextKey.titleOnboardingTwo,
                     description: TextKey.underTitleOnboardingTwo,
                     image: MyAssets.onboardingTwo,
-                    colorButton: Color(0xff6B1A3B),
+                    colorButton: Theme.of(context).colorScheme.primary,
                     action: _nextOnboarding
                   ),
                   OnboardingContentWidget(
                     title: TextKey.titleOnboardingThree,
                     description: TextKey.underTitleOnboardingThree,
                     image: MyAssets.onboardingThree,
-                    colorButton: Color(0xff6B1A3B),
-                    action: () => context.go(AppPage.register.routePath),
+                    colorButton: Theme.of(context).colorScheme.primary,
+                    action: () => context.push(AppPage.register.routePath),
                   ),
                 ],
               ),
@@ -64,7 +64,6 @@ class OnboardingWrapContentWidget extends StatelessWidget {
   }
 
   _nextOnboarding() {
-    print("hello ${_controller.page}");
-    _controller.nextPage(duration: Duration(milliseconds: 300), curve: Curves.easeIn);
+     _controller.nextPage(duration: Duration(milliseconds: 300), curve: Curves.easeIn);
   }
 }

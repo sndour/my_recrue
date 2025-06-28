@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BrightnessBloc extends Bloc<BrightnessEvent, BrightnessState> {
-  BrightnessBloc() : super(BrightnessState(ThemeMode.dark)) {
+  BrightnessBloc() : super(BrightnessState(ThemeMode.light)) {
     on<ToggleBrightnessEvent>(_onToggleBrightness);
   }
 

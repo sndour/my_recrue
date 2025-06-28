@@ -38,12 +38,12 @@ class RegisterScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 5),
-            CustomButton(action: (){}, text: 'S\'inscrire avec ', color: Color(0xffF0D9E3), textColor: Color(0xff6B1A3B), image: MyAssets.googleLogin,),
+            CustomButton(action: (){}, text: 'S\'inscrire avec ', color: Theme.of(context).colorScheme.secondary, textColor: Color(0xff6B1A3B), image: MyAssets.googleLogin,),
             SizedBox(height: 5),
             CustomButton(action: (){}, text: 'S\'inscrire avec ', color: Color(0xffF0D9E3), textColor: Color(0xff6B1A3B), image: MyAssets.facebookLogin,),
             const Spacer(),
             CustomButton(action: (){
-              context.go(AppPage.accueil.routePath);
+              context.push(AppPage.accueil.routePath);
             }, text: 'Suivant', color: Color(0xff6B1A3B), textColor: Colors.white,),
             SizedBox(height: 31),
           ],

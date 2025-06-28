@@ -1,6 +1,5 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_recrue/src/core/utils/fonts.dart';
 
 // TODO customize this as you wish
@@ -17,32 +16,11 @@ final lightTheme = FlexThemeData.light(
     tertiary: Color(0xffFF2323),
   ),
 
-  textTheme: Typography.material2021().black.apply(fontFamily: Fonts.Satoshi).copyWith(
-    displayLarge: Typography.material2021().black.displayLarge?.copyWith(
-      fontFamily: Fonts.Satoshi,
-      fontWeight: FontWeight.bold,
-      fontSize: 30.sp,
-      letterSpacing: 0,
-    ),
-    headlineSmall: Typography.material2021().black.headlineSmall?.copyWith(
-      fontFamily: Fonts.Satoshi,
-      //fontWeight: FontWeight.w600, // This will try to find a font file
-    ),
-    bodyMedium: Typography.material2021().black.bodyMedium?.copyWith(
-      fontFamily: Fonts.Satoshi,
-      fontSize: 16.sp,
-      letterSpacing: 0.5,
-    ),
-    // If you need italic style:
-    labelSmall: Typography.material2021().black.labelSmall?.copyWith(
-      fontFamily: Fonts.Satoshi,
-      //fontStyle: FontStyle.italic, // This will try to use YourFont-Italic.otf
-    ),
-  ),
-
-
+  blendLevel: 0,
+  usedColors: 1,
 
   subThemesData: FlexSubThemesData(
+    blendTextTheme: false,
     interactionEffects: false,
     tintedDisabledControls: false,
     blendOnColors: false,
@@ -79,7 +57,11 @@ final lightTheme = FlexThemeData.light(
     navigationRailLabelType: NavigationRailLabelType.none,
     elevatedButtonRadius: 10.0,
   ),
-  keyColors: const FlexKeyColors(useSecondary: true, useTertiary: true),
+  keyColors: const FlexKeyColors(
+    useKeyColors: false,
+    useSecondary: false,
+    useTertiary: false,
+  ),
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
   useMaterial3: true,
   swapLegacyOnMaterial3: true,
