@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication_screen.dart';
-import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen.dart';
-import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen_step_four.dart';
-import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen_step_two.dart';
-import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen_step_three.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_four.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_two.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_three.dart';
 import 'package:my_recrue/src/feature/home/home_screen.dart';
 import 'package:my_recrue/src/feature/onboarding/widgets/onboarding_layout.dart';
 import 'package:my_recrue/src/feature/onboarding/widgets/onboarding_wrap_content_widget.dart';
