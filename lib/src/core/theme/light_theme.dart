@@ -20,7 +20,6 @@ final lightTheme = FlexThemeData.light(
   usedColors: 1,
 
   subThemesData: FlexSubThemesData(
-    blendTextTheme: false,
     interactionEffects: false,
     tintedDisabledControls: false,
     blendOnColors: false,
