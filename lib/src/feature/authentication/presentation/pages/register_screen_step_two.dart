@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/common_widgets/custom_button.dart';
 import 'package:my_recrue/src/common_widgets/custum_text_field.dart';
-import 'package:my_recrue/src/core/utils/my_assets.dart';
-import 'package:my_recrue/src/core/utils/text_key.dart';
 import 'package:my_recrue/src/router/route_constants.dart';
 
 class RegisterScreenStepTwo extends StatelessWidget {

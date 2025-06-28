@@ -1,15 +1,11 @@
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/common_widgets/custom_button.dart';
 import 'package:my_recrue/src/common_widgets/custom_outlined_button.dart';
-import 'package:my_recrue/src/common_widgets/custum_text_field.dart';
-import 'package:my_recrue/src/core/utils/my_assets.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/components/circle_photo.dart';
 import 'package:my_recrue/src/router/route_constants.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class RegisterScreenStepFour extends StatelessWidget {
   const RegisterScreenStepFour({super.key});
