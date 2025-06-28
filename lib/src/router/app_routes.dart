@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication_screen.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen_step_four.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen_step_two.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/register_screen_step_three.dart';
 import 'package:my_recrue/src/feature/home/home_screen.dart';
 import 'package:my_recrue/src/feature/onboarding/widgets/onboarding_layout.dart';
 import 'package:my_recrue/src/feature/onboarding/widgets/onboarding_wrap_content_widget.dart';
@@ -40,6 +43,21 @@ List<RouteBase> appRoutes = [
     path: AppPage.accueil.routePath,
     name: AppPage.accueil.routeName,
     builder: (context, state) => const HomeScreen(),
+  ),
+  GoRoute(
+    path: AppPage.register_step_two.routePath,
+    name: AppPage.register_step_two.routeName,
+    builder: (context, state) => const RegisterScreenStepTwo(),
+  ),
+  GoRoute(
+    path: AppPage.register_step_three.routePath,
+    name: AppPage.register_step_three.routeName,
+    builder: (context, state) => const RegisterScreenStepThree(),
+  ),
+  GoRoute(
+    path: AppPage.register_step_four.routePath,
+    name: AppPage.register_step_four.routeName,
+    builder: (context, state) => const RegisterScreenStepFour(),
   ),
   StatefulShellRoute.indexedStack(
     pageBuilder:

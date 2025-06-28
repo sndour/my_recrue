@@ -6,7 +6,7 @@ import 'package:my_recrue/src/core/utils/fonts.dart';
 // Consider using and reading these docs: https://pub.dev/packages/flex_color_scheme
 // https://rydmike.com/flexcolorscheme/themesplayground-latest/
 final lightTheme = FlexThemeData.light(
-  scheme: FlexScheme.verdunHemlock,
+  //scheme: FlexScheme.verdunHemlock,
   fontFamily: Fonts.Satoshi,
 
   colors: const FlexSchemeColor(
@@ -14,6 +14,8 @@ final lightTheme = FlexThemeData.light(
     primary: Color(0xff6B1A3B),
     secondary: Color(0xffF0D9E3),
     tertiary: Color(0xffFF2323),
+    secondaryContainer: Color(0xffF0D9E3),
+    tertiaryContainer: Color(0xffFF2323),
   ),
 
   blendLevel: 0,
@@ -22,6 +24,7 @@ final lightTheme = FlexThemeData.light(
   subThemesData: FlexSubThemesData(
     interactionEffects: false,
     tintedDisabledControls: false,
+    blendOnLevel: 0,
     blendOnColors: false,
     useMaterial3Typography: true,
     filledButtonSchemeColor: SchemeColor.onTertiaryContainer,
@@ -55,13 +58,12 @@ final lightTheme = FlexThemeData.light(
     navigationRailBackgroundSchemeColor: SchemeColor.surface,
     navigationRailLabelType: NavigationRailLabelType.none,
     elevatedButtonRadius: 10.0,
+    outlinedButtonRadius: 10.0,
+    outlinedButtonOutlineSchemeColor: SchemeColor.primary,
+    outlinedButtonBorderWidth: 2.0,
   ),
-  keyColors: const FlexKeyColors(
-    useKeyColors: false,
-    useSecondary: false,
-    useTertiary: false,
-  ),
-  visualDensity: FlexColorScheme.comfortablePlatformDensity,
+  keyColors: const FlexKeyColors(useKeyColors: false),
+  visualDensity: VisualDensity.standard,
   useMaterial3: true,
   swapLegacyOnMaterial3: true,
 );

@@ -23,4 +23,5 @@ class TextKey {
   static String qr_code_title = "Scanner le code QR pour ajouter un contact";
   static String arrow_title = "Voir la liste des contacts";
   static String createContact = "Créer un contact";
+  static String downloadPhoto = "Télécharger une photo";
 }

@@ -1,9 +1,12 @@
+import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatefulWidget {
   final String hintText;
   final String initialValue;
-  const CustomTextField({super.key, required this.hintText, required this.initialValue});
+  final bool? withIcons;
+  const CustomTextField({super.key, required this.hintText, required this.initialValue, this.withIcons});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -11,17 +14,19 @@ class CustomTextField extends StatefulWidget {
 
 class _CustomTextFieldState extends State<CustomTextField> {
   late TextEditingController _controller;
-
+  late bool withIcons;
   final FocusNode _focusNode = FocusNode();
   bool _isFocused = false;
+
 
   @override
   void initState() {
     super.initState();
+    withIcons = widget.withIcons ?? false;
     _controller = TextEditingController(text: widget.initialValue);
     _focusNode.addListener(_onFocusChange);
     // Assurez-vous que l'état initial du focus est correct si le contrôleur a du texte
-    _isFocused = _focusNode.hasFocus || _controller.text.isNotEmpty;
+    _isFocused = _focusNode.hasFocus;
   }
 
   @override
@@ -50,6 +55,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     final double _borderWidth = _isFocused ? 1.5 : 1.0;
 
     return Container(
+      height: 59.h,
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -83,7 +89,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
             child: TextField(
               controller: _controller,
               focusNode: _focusNode,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
+                icon: withIcons == true ? Padding(
+                  padding: const EdgeInsets.only(top: 4.0),
+                  child: CountryFlag.fromCountryCode('CI', width: 18.w, height: 14.h),
+                ) : SizedBox.shrink(),
                 isDense: true,
                 contentPadding: EdgeInsets.zero,
                 border: InputBorder.none,
@@ -98,6 +108,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ),
             ),
           ),
+          withIcons == true ? Positioned(
+            right: 0.w,
+            top: 10.h,
+            bottom: 19.h,
+            child: Container(
+              child: Icon(
+                Icons.check_circle,
+                color: Colors.red,
+              ),
+            ),
+          ) : SizedBox.shrink(),
         ],
       ),
     );

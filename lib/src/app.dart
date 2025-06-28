@@ -17,7 +17,6 @@ class MainApp extends StatelessWidget {
 
     final goRouter = context.read<RouterBloc>().state;
 
-
     return ScreenUtilInit(
       designSize: ScreenUtil.defaultSize,
       splitScreenMode: true,

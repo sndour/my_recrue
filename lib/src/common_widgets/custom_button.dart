@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomButton extends StatelessWidget {
@@ -14,19 +15,20 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 59,
+      height: 59.h,
       child: ElevatedButton(
         onPressed: action,
         style: ButtonStyle(
+          elevation: WidgetStateProperty.all(0),
           backgroundColor: WidgetStateProperty.all(color),
-          textStyle: WidgetStateProperty.all(Theme.of(context).textTheme.bodyMedium!.copyWith(color: textColor)),
+          //textStyle: WidgetStateProperty.all(Theme.of(context).textTheme.bodyMedium!.copyWith(color: textColor)),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(text, style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: textColor, fontWeight: FontWeight.bold)),
-            SizedBox(width: 5,),
-            image != null ? SvgPicture.asset(image!) : const SizedBox.shrink(),
+            SizedBox(width: 5.h,),
+            image != null ? SvgPicture.asset(image!, width: 35.w, height: 35.w,) : const SizedBox.shrink(),
           ],
         ),
       ),

@@ -16,44 +16,42 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 31.0, top: 52, right: 31),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset(MyAssets.menu),
-                  SvgPicture.asset(MyAssets.mini_logo),
-                  Image.asset(MyAssets.user_icon, width: 37, height: 37),
-                ],
+        padding: EdgeInsets.only(left: 31.w, top: 52.h, right: 31.w),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SvgPicture.asset(MyAssets.menu),
+                SvgPicture.asset(MyAssets.mini_logo),
+                Image.asset(MyAssets.user_icon, width: 37, height: 37),
+              ],
+            ),
+            const SizedBox(height: 20),
+            Text(
+              TextKey.homeGreetings,
+              style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                fontSize: 24.sp,
+                color: Theme.of(context).colorScheme.primary,
               ),
-              const SizedBox(height: 20),
-              Text(
-                TextKey.homeGreetings,
-                style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  fontSize: 24.sp,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                TextKey.homeSubtitle,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodyMedium!.copyWith(fontSize: 16.sp),
-              ),
-              SizedBox(height: 34),
-              HomeTeaserWidget(),
-              SizedBox(height: 10),
-              QrCodeWidget(),
-              SizedBox(height: 10),
-              ArrowWidget(),
-              SizedBox(height: 10),
-              ContactWidget(),
-            ],
-          ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              TextKey.homeSubtitle,
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium!.copyWith(fontSize: 16.sp),
+            ),
+            SizedBox(height: 34),
+            HomeTeaserWidget(),
+            SizedBox(height: 10),
+            QrCodeWidget(),
+            SizedBox(height: 10),
+            ArrowWidget(),
+            SizedBox(height: 10),
+            ContactWidget(),
+          ],
         ),
       ),
     );

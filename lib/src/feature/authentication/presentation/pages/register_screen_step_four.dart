@@ -1,14 +1,18 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/common_widgets/custom_button.dart';
+import 'package:my_recrue/src/common_widgets/custom_outlined_button.dart';
 import 'package:my_recrue/src/common_widgets/custum_text_field.dart';
 import 'package:my_recrue/src/core/utils/my_assets.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/components/circle_photo.dart';
 import 'package:my_recrue/src/router/route_constants.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class RegisterScreenStepFour extends StatelessWidget {
+  const RegisterScreenStepFour({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,30 +24,25 @@ class RegisterScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 25.h),
-            Image.asset(MyAssets.logo, width: 102.w, height: 47.h),
+            GestureDetector(onTap: () {
+              context.pop();
+            }, child: Icon(Icons.arrow_back_ios, size: 30.sp, color: Theme.of(context).colorScheme.primary,)),
             SizedBox(height: 27.h),
             Text('Inscription', style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 24.sp, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),),
             SizedBox(height: 11.h),
             Text('Veuillez entrez vos informations d’inscription', style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16.sp,)),
-            SizedBox(height: 10.h),
-            CustomTextField(hintText: 'Nom', initialValue: 'Koné',),
-            SizedBox(height: 10.h),
-            CustomTextField(hintText: 'Prénoms', initialValue: 'Soupkafolo Christian',),
-            SizedBox(height: 10.h),
-            Row(
-              children: [
-                Text(TextKey.askIfAlreadyHadAnAccount,),
-                SizedBox(width: 5.h),
-                Text(TextKey.connect, style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold,  decoration: TextDecoration.underline, decorationColor: Theme.of(context).colorScheme.primary, decorationThickness: 1.0
-                ),),
-              ],
+            SizedBox(height: 11.h),
+            Text(TextKey.downloadPhoto, style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 14.sp, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.w400),),
+            SizedBox(height: 19.h),
+            Center(
+              child: CirclePhoto(width: 222.w, height: 225.h,)
             ),
-            SizedBox(height: 20.h),
-            CustomButton(action: (){}, text: 'S\'inscrire avec ', color: Theme.of(context).colorScheme.secondaryFixed, textColor: Theme.of(context).colorScheme.primary, image: MyAssets.googleLogin,),
-            SizedBox(height: 8.h),
-            CustomButton(action: (){}, text: 'S\'inscrire avec ', color: Theme.of(context).colorScheme.secondaryFixed, textColor: Theme.of(context).colorScheme.primary, image: MyAssets.facebookLogin,),
             const Spacer(),
             SizedBox(height: 24.h),
+            CustomOutlinedButton(action: (){
+              context.push(AppPage.accueil.routePath);
+            }, text: 'Ignorer', color: Theme.of(context).colorScheme.primary, textColor: Theme.of(context).colorScheme.primary,),
+            SizedBox(height: 9.h),
             CustomButton(action: (){
               context.push(AppPage.accueil.routePath);
             }, text: 'Suivant', color: Color(0xff6B1A3B), textColor: Colors.white,),
@@ -51,7 +50,6 @@ class RegisterScreen extends StatelessWidget {
           ],
         ),
       ),
-
     );
   }
 }
