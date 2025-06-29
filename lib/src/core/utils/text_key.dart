@@ -13,6 +13,19 @@ class TextKey {
       "L'application vous aide à rester organisé en synchronisant vos contacts sur tous vos appareils, où que vous soyez.";
   static String askIfAlreadyHadAnAccount = "Déjà un compte?";
   static String connect = "Connectez-vous";
+  static String notHaveAnAccount = "Pas encore de compte?";
+  static String tapHere = "Cliquez ici";
+  static String forgotPassword = "Mot de passe oublié?";
+  static String reInitPassword = "Réinitialiser votre mot de passe";
+  static String reInitPasswordSubtitle =
+      "Veuillez entrez votre numéro de téléphone pour réinitialiser votre mot de passe";
+
+  static String password = "Mot de passe";
+  static String newPassword = "Veuiller créer un nouveau mot de passe";
+  static String otp = "Code OTP";
+  static String otpSubtitle = "Vous avez reçu un code de réactivation par sms";
+
+  static String registerHere = "Inscrivez-vous ici";
   static String homeGreetings = "Bonjour Christian";
   static String homeSubtitle =
       "Bienvenue dans votre outil de gestion des contacts";

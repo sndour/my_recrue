@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication_screen.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication/authentication_screen.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication/authentication_screen_four.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication/authentication_screen_three.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication/authentication_screen_two.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_four.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_two.dart';
@@ -30,9 +33,24 @@ List<RouteBase> appRoutes = [
     builder: (context, state) => OnboardingLayout(child: OnboardingWrapContentWidget()),
   ),
   GoRoute(
-    path: AppPage.authentication.routePath,
-    name: AppPage.authentication.routeName,
+    path: AppPage.authentication_screen.routePath,
+    name: AppPage.authentication_screen.routeName,
     builder: (context, state) => const AuthenticationScreen(),
+  ),
+  GoRoute(
+    path: AppPage.authentication_screen_two.routePath,
+    name: AppPage.authentication_screen_two.routeName,
+    builder: (context, state) => const AuthenticationScreenTwo(),
+  ),
+  GoRoute(
+    path: AppPage.authentication_screen_three.routePath,
+    name: AppPage.authentication_screen_three.routeName,
+    builder: (context, state) => const AuthenticationScreenThree(),
+  ),
+  GoRoute(
+    path: AppPage.authentication_screen_four.routePath,
+    name: AppPage.authentication_screen_four.routeName,
+    builder: (context, state) => const AuthenticationScreenFour(),
   ),
   GoRoute(
     path: AppPage.register.routePath,
@@ -59,6 +77,7 @@ List<RouteBase> appRoutes = [
     name: AppPage.register_step_four.routeName,
     builder: (context, state) => const RegisterScreenStepFour(),
   ),
+
   StatefulShellRoute.indexedStack(
     pageBuilder:
         (

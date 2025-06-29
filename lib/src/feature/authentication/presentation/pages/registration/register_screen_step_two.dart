@@ -26,7 +26,7 @@ class RegisterScreenStepTwo extends StatelessWidget {
             SizedBox(height: 11.h),
             Text('Veuillez entrez vos informations d’inscription', style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16.sp,)),
             SizedBox(height: 10.h),
-            CustomTextField(hintText: 'Email', initialValue: 'christian.kone@gmail.com',),
+            CustomTextField(hintText: 'Email', initialValue: 'christian.kone@gmail.com',obscureText: false,),
             const Spacer(),
             SizedBox(height: 24.h),
             CustomButton(action: (){

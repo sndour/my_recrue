@@ -25,7 +25,7 @@ class SplashScreen extends StatelessWidget {
   _navigateToHome(BuildContext context) async {
     var duration = Duration(milliseconds: 5000);
     await Future.delayed(duration, () {
-      if (context.mounted) context.push(AppPage.register_step_four.routePath);
+      if (context.mounted) context.push(AppPage.authentication_screen_three.routePath);
     });
   }
 }

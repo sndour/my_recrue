@@ -26,9 +26,9 @@ class RegisterScreen extends StatelessWidget {
             SizedBox(height: 11.h),
             Text('Veuillez entrez vos informations d’inscription', style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16.sp,)),
             SizedBox(height: 10.h),
-            CustomTextField(hintText: 'Nom', initialValue: 'Koné',),
+            CustomTextField(hintText: 'Nom', initialValue: 'Koné', obscureText: false,),
             SizedBox(height: 10.h),
-            CustomTextField(hintText: 'Prénoms', initialValue: 'Soupkafolo Christian',),
+            CustomTextField(hintText: 'Prénoms', initialValue: 'Soupkafolo Christian', obscureText: false,),
             SizedBox(height: 10.h),
             Row(
               children: [
