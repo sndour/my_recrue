@@ -61,7 +61,7 @@ class _CountdownWidgetState extends State<CountdownWidget> {
   @override
   void dispose() {
     _timer
-        .cancel(); // Très important : annuler le minuteur pour éviter les fuites de mémoire
+        .cancel();
     super.dispose();
   }
 
