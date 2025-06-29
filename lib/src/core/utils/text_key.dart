@@ -24,7 +24,8 @@ class TextKey {
   static String newPassword = "Veuiller créer un nouveau mot de passe";
   static String otp = "Code OTP";
   static String otpSubtitle = "Vous avez reçu un code de réactivation par sms";
-
+  static String otpInstruction = "Pas de code OTP reçu?";
+  static String otpInstructionAction = "Renvoyez?";
   static String registerHere = "Inscrivez-vous ici";
   static String homeGreetings = "Bonjour Christian";
   static String homeSubtitle =

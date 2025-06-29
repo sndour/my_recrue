@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/common_widgets/custom_button.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
+import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication/widgets/countdown_widget.dart';
 import 'package:my_recrue/src/router/route_constants.dart';
 import 'package:pinput/pinput.dart';
 
@@ -77,6 +78,17 @@ class AuthenticationScreenThree extends StatelessWidget {
                   border: Border.all(color: Theme.of(context).colorScheme.primary, width: 2.0),
                 ),
               ),
+            ),
+            SizedBox(height: 15.h,),
+            CountdownWidget(duration: Duration(seconds: 20)),
+            SizedBox(height: 10.h,),
+            Row(
+              children: [
+                Text(TextKey.otpInstruction,),
+                SizedBox(width: 5.h),
+                Text(TextKey.otpInstructionAction, style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold,  decoration: TextDecoration.underline, decorationColor: Theme.of(context).colorScheme.primary, decorationThickness: 1.0
+                ),),
+              ],
             ),
             const Spacer(),
             SizedBox(height: 24.h),
