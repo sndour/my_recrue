@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_recrue/src/common_widgets/custom_bottom_sheet.dart';
 import 'package:my_recrue/src/common_widgets/custom_outlined_button.dart';
 import 'package:my_recrue/src/common_widgets/custom_violet_field.dart';
+import 'package:my_recrue/src/core/utils/my_assets.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
-
-import '../../core/utils/my_assets.dart';
 
 class ContactListScreen extends StatelessWidget {
   const ContactListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
       body: Padding(

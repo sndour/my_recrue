@@ -2,14 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_recrue/src/common_widgets/custom_button.dart';
 import 'package:my_recrue/src/common_widgets/custom_field_information.dart';
 import 'package:my_recrue/src/common_widgets/custum_text_field.dart';
 import 'package:my_recrue/src/core/utils/my_assets.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
-import 'package:my_recrue/src/feature/authentication/presentation/pages/authentication/widgets/countdown_widget.dart';
-import 'package:my_recrue/src/router/route_constants.dart';
-import 'package:pinput/pinput.dart';
 
 import '../authentication/presentation/components/circle_photo.dart';
 
@@ -21,7 +17,7 @@ class CreateContactScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 31.0),
+        padding: const EdgeInsets.symmetric(horizontal: 31),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -49,8 +45,7 @@ class CreateContactScreen extends StatelessWidget {
                 .copyWith(fontSize: 16.sp,)),
             SizedBox(height: 25.h),
             Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 31.0), // Appliquez le padding ici pour la partie scrollable
+              child: SingleChildScrollView(// Appliquez le padding ici pour la partie scrollable
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

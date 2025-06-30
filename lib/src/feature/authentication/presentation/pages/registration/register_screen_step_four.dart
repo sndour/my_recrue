@@ -36,11 +36,11 @@ class RegisterScreenStepFour extends StatelessWidget {
             const Spacer(),
             SizedBox(height: 24.h),
             CustomOutlinedButton(action: (){
-              context.push(AppPage.accueil.routePath);
+              context.push(AppPage.authentication_screen.routePath);
             }, text: 'Ignorer', color: Theme.of(context).colorScheme.primary, textColor: Theme.of(context).colorScheme.primary,),
             SizedBox(height: 9.h),
             CustomButton(action: (){
-              context.push(AppPage.accueil.routePath);
+              context.push(AppPage.authentication_screen.routePath);
             }, text: 'Suivant', color: Color(0xff6B1A3B), textColor: Colors.white,),
             SizedBox(height: 24.h),
           ],

@@ -30,7 +30,7 @@ class RegisterScreenStepTwo extends StatelessWidget {
             const Spacer(),
             SizedBox(height: 24.h),
             CustomButton(action: (){
-              context.push(AppPage.accueil.routePath);
+              context.push(AppPage.register_step_three.routePath);
             }, text: 'Suivant', color: Color(0xff6B1A3B), textColor: Colors.white,),
             SizedBox(height: 24.h),
           ],

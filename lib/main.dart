@@ -4,24 +4,24 @@ import 'package:flutter/material.dart';
 // ignore:depend_on_referenced_packages
 import 'package:flutter_web_plugins/url_strategy.dart' show usePathUrlStrategy;
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_recrue/src/core/utils/bloc_observer.dart';
-import 'package:my_recrue/src/core/services/bloc_widget.dart';
 
 import 'package:my_recrue/src/app.dart';
 
 import 'package:my_recrue/src/core/utils/register_error_handler.dart';
+import 'package:my_recrue/src/router/app_router.dart';
 
 Future<void> main() async {
-  Bloc.observer = AppBlocObserver();
+  //Bloc.observer = AppBlocObserver();
   // turn off the # in the URLs on the web and remove if only mobil app development
   usePathUrlStrategy();
   registerErrorHandler();
+  final goRouter = AppRouter.router;
+
 
   runZonedGuarded(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
-      runApp(const BlocWidget(child: MainApp()));
+      runApp(MainApp(router: goRouter,));
     },
     (error, stackTrace) async {
       debugPrint('$error');

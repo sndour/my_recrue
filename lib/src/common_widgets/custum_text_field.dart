@@ -33,7 +33,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
     withIcons = widget.withIcons ?? false;
     _controller = TextEditingController(text: widget.initialValue);
     _focusNode.addListener(_onFocusChange);
-    // Assurez-vous que l'état initial du focus est correct si le contrôleur a du texte
     _isFocused = _focusNode.hasFocus;
   }
 

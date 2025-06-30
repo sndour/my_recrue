@@ -54,7 +54,7 @@ class AuthenticationScreen extends StatelessWidget {
             const Spacer(),
             SizedBox(height: 16.h),
             CustomButton(action: (){
-              context.push(AppPage.accueil.routePath);
+              context.push(AppPage.authentication_screen_two.routePath);
             }, text: 'Connecter', color: Color(0xff6B1A3B), textColor: Colors.white,),
             SizedBox(height: 24.h),
           ],

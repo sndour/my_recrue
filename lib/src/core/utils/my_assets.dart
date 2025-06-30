@@ -1,5 +1,6 @@
 class MyAssets {
   static String splashScreen = 'assets/images/splash_screen.svg';
+  static String splash2 = 'assets/images/splash_2.svg';
   static String onboardingOne = 'assets/images/onboarding_one.svg';
   static String onboardingTwo = 'assets/images/onboarding_two.svg';
   static String onboardingThree = 'assets/images/onboarding_three.svg';

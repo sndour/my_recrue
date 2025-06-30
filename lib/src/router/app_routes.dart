@@ -20,7 +20,7 @@ import 'package:my_recrue/src/router/route_constants.dart';
 import 'package:my_recrue/src/feature/counter/presentation/counter_screen.dart';
 import 'package:my_recrue/src/feature/counter/presentation/empty_screen.dart';
 
-import '../feature/home/bottom_navigation.dart';
+import 'package:my_recrue/src/feature/home/bottom_navigation.dart';
 
 final _homeNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'home');
 final _emptyNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'empties');

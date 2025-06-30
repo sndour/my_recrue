@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_recrue/src/router/app_router.dart';
 import 'package:my_recrue/src/router/route_constants.dart';
 
 abstract class RouterEvent {}
@@ -30,30 +29,32 @@ class ReplaceEvent extends RouterEvent {
 
 class GoHomeEvent extends RouterEvent {}
 
-class RouterBloc extends Bloc<RouterEvent, GoRouter> {
-  RouterBloc() : super(AppRouter.router) {
+class RouterBloc extends Bloc<RouterEvent, void> {
+  final GoRouter _router;
+
+  RouterBloc(this._router) : super(null) {
     on<PushEvent>((event, emit) {
-      state.push(event.page.routePath);
+      _router.push(event.page.routePath);
     });
 
     on<PopEvent>((event, emit) {
-      state.pop();
+      _router.pop();
     });
 
     on<PushNamedEvent>((event, emit) {
-      state.pushNamed(event.page.routeName);
+      _router.pushNamed(event.page.routeName);
     });
 
     on<PushReplacementNamedEvent>((event, emit) {
-      state.pushReplacement(event.page.routePath, extra: event.extra);
+      _router.pushReplacement(event.page.routePath, extra: event.extra);
     });
 
     on<ReplaceEvent>((event, emit) {
-      state.replace(event.page.routePath);
+      _router.replace(event.page.routePath);
     });
 
     on<GoHomeEvent>((event, emit) {
-      state.push(AppPage.home.routePath);
+      _router.push(AppPage.home.routePath);
     });
   }
 }

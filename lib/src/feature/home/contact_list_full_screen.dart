@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:my_recrue/src/common_widgets/contact_tile.dart';
 import 'package:my_recrue/src/common_widgets/custom_bottom_sheet.dart';
 import 'package:my_recrue/src/common_widgets/custom_outlined_button.dart';
 import 'package:my_recrue/src/common_widgets/custom_violet_field.dart';
-import 'package:my_recrue/src/core/utils/text_key.dart';
+import 'package:my_recrue/src/core/utils/my_assets.dart';
 
-import '../../common_widgets/contact_tile.dart';
-import '../../core/utils/my_assets.dart';
+
 import 'entities/user.dart';
 
-class ContactListFullScreen extends StatelessWidget {
+class ContactListFullScreen extends StatefulWidget {
   const ContactListFullScreen({super.key});
+
+  @override
+  State<ContactListFullScreen> createState() => _ContactListFullScreenState();
+}
+
+class _ContactListFullScreenState extends State<ContactListFullScreen> {
+
+  final _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +83,7 @@ class ContactListFullScreen extends StatelessWidget {
 
                   // Scrollbar par-dessus
                   RawScrollbar(
+                    controller: _scrollController,
                     thumbColor: Colors.grey.shade400,
                     radius: const Radius.circular(8),
                     thickness: 8,
@@ -79,6 +92,7 @@ class ContactListFullScreen extends StatelessWidget {
                    // trackVisibility: true,
                     thumbVisibility: true,
                     child: ListView.separated(
+                      controller: _scrollController,
                       itemCount: users.length,
                       separatorBuilder: (_, __) => SizedBox(height: 10.h),
                       itemBuilder: (context, index) {

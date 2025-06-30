@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_recrue/src/common_widgets/home_teaser_widget.dart';
 import 'package:my_recrue/src/core/utils/my_assets.dart';
 import 'package:my_recrue/src/core/utils/text_key.dart';
 import 'package:my_recrue/src/feature/home/widgets/arrow_widget.dart';
 import 'package:my_recrue/src/feature/home/widgets/qr_code_widget.dart';
+import 'package:my_recrue/src/router/route_constants.dart';
 
 import 'widgets/contact_widget.dart';
 
@@ -50,7 +52,12 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 10),
             ArrowWidget(),
             SizedBox(height: 10),
-            ContactWidget(),
+            GestureDetector(
+              onTap: () {
+                context.push(AppPage.bottom_navigation.routePath);
+              },
+              child: ContactWidget(),
+            ),
           ],
         ),
       ),
