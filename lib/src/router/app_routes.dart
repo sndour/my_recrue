@@ -8,6 +8,8 @@ import 'package:my_recrue/src/feature/authentication/presentation/pages/registra
 import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_four.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_two.dart';
 import 'package:my_recrue/src/feature/authentication/presentation/pages/registration/register_screen_step_three.dart';
+import 'package:my_recrue/src/feature/home/contact_list_screen.dart';
+import 'package:my_recrue/src/feature/home/create_contact_screen.dart';
 import 'package:my_recrue/src/feature/home/home_screen.dart';
 import 'package:my_recrue/src/feature/onboarding/widgets/onboarding_layout.dart';
 import 'package:my_recrue/src/feature/onboarding/widgets/onboarding_wrap_content_widget.dart';
@@ -17,6 +19,8 @@ import 'package:my_recrue/src/splash_screen.dart';
 import 'package:my_recrue/src/router/route_constants.dart';
 import 'package:my_recrue/src/feature/counter/presentation/counter_screen.dart';
 import 'package:my_recrue/src/feature/counter/presentation/empty_screen.dart';
+
+import '../feature/home/bottom_navigation.dart';
 
 final _homeNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'home');
 final _emptyNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'empties');
@@ -77,7 +81,21 @@ List<RouteBase> appRoutes = [
     name: AppPage.register_step_four.routeName,
     builder: (context, state) => const RegisterScreenStepFour(),
   ),
-
+  GoRoute(
+    path: AppPage.contact_list.routePath,
+    name: AppPage.contact_list.routeName,
+    builder: (context, state) => const ContactListScreen(),
+  ),
+  GoRoute(
+    path: AppPage.bottom_navigation.routePath,
+    name: AppPage.bottom_navigation.routeName,
+    builder: (context, state) => const BottomNavigation(),
+  ),
+  GoRoute(
+    path: AppPage.create_account.routePath,
+    name: AppPage.create_account.routeName,
+    builder: (context, state) => const CreateContactScreen(),
+  ),
   StatefulShellRoute.indexedStack(
     pageBuilder:
         (

@@ -11,7 +11,6 @@ class ContactWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 348.w,
-
       height: 92.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),

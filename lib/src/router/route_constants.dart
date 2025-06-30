@@ -11,7 +11,10 @@ enum AppPage {
   register_step_two,
   register_step_three,
   register_step_four,
+  bottom_navigation,
+  create_account,
   accueil,
+  contact_list,
 }
 
 extension AppPageExtension on AppPage {
@@ -30,6 +33,9 @@ extension AppPageExtension on AppPage {
       AppPage.authentication_screen_two => '/authentication_screen_two',
       AppPage.authentication_screen_three => '/authentication_screen_three',
       AppPage.authentication_screen_four => '/authentication_screen_four',
+      AppPage.contact_list => '/contact_list',
+      AppPage.bottom_navigation => '/bottom_navigation',
+      AppPage.create_account => '/create_account',
     };
   }
 
@@ -48,6 +54,9 @@ extension AppPageExtension on AppPage {
       AppPage.authentication_screen_two => 'AUTHENTICATION_SCREEN_TWO',
       AppPage.authentication_screen_four => 'AUTHENTICATION_SCREEN_FOUR',
       AppPage.authentication_screen_three => 'AUTHENTICATION_SCREEN_THREE',
+      AppPage.contact_list => 'CONTACT_LIST',
+      AppPage.bottom_navigation => 'BOTTOM_NAVIGATION',
+      AppPage.create_account => 'CREATE_ACCOUNT',
     };
   }
 }

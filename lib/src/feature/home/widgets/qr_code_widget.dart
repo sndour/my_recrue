@@ -26,9 +26,10 @@ class QrCodeWidget extends StatelessWidget {
             width: 208,
             child: Text(
               TextKey.qr_code_title,
-              style: Theme.of(
-                context,
-              ).textTheme.bodyMedium!.copyWith(fontSize: 16.sp, color: Theme.of(context).colorScheme.primary),
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                fontSize: 16.sp,
+                color: Theme.of(context).colorScheme.primary,
+              ),
             ),
           ),
           SvgPicture.asset(MyAssets.qr_code, width: 45, height: 45),

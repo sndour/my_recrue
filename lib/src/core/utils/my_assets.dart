@@ -13,4 +13,13 @@ class MyAssets {
   static String qr_code = 'assets/images/qr_code.svg';
   static String arrowContactList = 'assets/images/arrow_contact_list.svg';
   static String contactImage = 'assets/images/contact_image.svg';
+  static String loupe = 'assets/images/loupe.svg';
+  static String emptyContactIcon = 'assets/images/empty_contact_icon.svg';
+  static String addIcon = 'assets/images/add_icon.svg';
+  static String allhassaneCoul = 'assets/images/allhassane_coul.png';
+  static String isaacCypher = 'assets/images/isaac_cypher.png';
+  static String marinaAlaba = 'assets/images/marina_alaba.png';
+  static String michaelOwen = 'assets/images/michael_owen.png';
+  static String mohamedSeri = 'assets/images/mohammed_seri.png';
+  static String royNiamkey = 'assets/images/roy_niamkey.png';
 }

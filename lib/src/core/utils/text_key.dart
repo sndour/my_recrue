@@ -38,4 +38,27 @@ class TextKey {
   static String arrow_title = "Voir la liste des contacts";
   static String createContact = "Créer un contact";
   static String downloadPhoto = "Télécharger une photo";
+  static String bottomNavigationLabelOne = "Favoris";
+  static String bottomNavigationLabelTwo = "Récent";
+  static String bottomNavigationLabelThree = "Contact";
+  static String contactFieldHint = "Rechercher dans les contacts";
+  static String emptyContactList = "Votre liste de contact est vide";
+  static String createContactTitle = "Créer un contact";
+  static String createContactSubtitle =
+      "Veuillez entrez les informations de contact";
+  static String addPhoneNumber = "Ajouter un numéro";
+  static String addEmail = "Ajouter une adresse email";
+  static String addBirthday = "Ajouter une date d'anniversaire";
+  static String addAddress = "Ajouter une adresse";
+  static String addTitle = "Intitulé";
+  static String addPrefix = "Préfixe";
+  static String addSuffix = "Suffixe";
+  static String addPseudo = "Pseudo";
+  static String addClassifiedAs = "Classer en tant que";
+  static String addJobTitle = "Intitulé du poste";
+  static String addDepartment = "Service";
+  static String addRelations = "Relations";
+  static String addWebsite = "Site Web";
+  static String addComplementaryFields = "Ajouter des champ complémentaires";
+  static String selectFieldsToAdd = "Sélectionner les champs à ajouter";
 }
